@@ -22,7 +22,7 @@ RUN apk add --update-cache \
 RUN adduser -SDH -u ${WEBDAV_UID} -G ${WEBDAV_GROUP} ${WEBDAV_USER}
 
 # Install nginx config files
-COPY files/nginx/ /etc/nginx-template/
+COPY files/nginx-template/ /etc/nginx-template/
 
 # Install startup script
 COPY files/entrypoint.sh /entrypoint.sh
